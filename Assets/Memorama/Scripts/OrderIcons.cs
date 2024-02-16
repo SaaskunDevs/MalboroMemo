@@ -36,8 +36,8 @@ public class OrderIcons : MonoBehaviour
         float panelHeight = panel.rect.height;
 
         //Calculamos cuántos iconos caben en una fila y en una columna con respecto al tamaño del arreglo de imagenes
-        int iconsPerRow = Mathf.FloorToInt(Mathf.Sqrt(size)); // Raíz cuadrada del tamaño del arreglo
-        int iconsPerColumn = Mathf.CeilToInt((float)size / iconsPerRow);
+        int iconsPerRow = 4;//Mathf.FloorToInt(Mathf.Sqrt(size)); // Raíz cuadrada del tamaño del arreglo
+        int iconsPerColumn = 2;//Mathf.CeilToInt((float)size / iconsPerRow);
 
         //Ajustamos el ancho y el espacio entre los iconos
         float iconWidth = (panelWidth - padding * (iconsPerRow + 1)) / iconsPerRow;
