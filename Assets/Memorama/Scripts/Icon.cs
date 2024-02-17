@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Icon : MonoBehaviour
 {
+    public Texture2D getImage;
     [SerializeField] private Main main;
     [SerializeField] private int itemID;
 
@@ -41,6 +42,7 @@ public class Icon : MonoBehaviour
         mat.SetTexture("_BackImg", img);
 
         isEnabled = true;
+        getImage = img;
     }
 
     public void SetPosition(Vector2 pos)

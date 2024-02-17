@@ -36,7 +36,7 @@ public class OrderIcons : MonoBehaviour
         float panelHeight = panel.rect.height;
 
         //Calculamos cuántos iconos caben en una fila y en una columna con respecto al tamaño del arreglo de imagenes
-        int iconsPerRow = 4;//Mathf.FloorToInt(Mathf.Sqrt(size)); // Raíz cuadrada del tamaño del arreglo
+        int iconsPerRow = 4; //Mathf.FloorToInt(Mathf.Sqrt(size)); // Raíz cuadrada del tamaño del arreglo
         int iconsPerColumn = 2;//Mathf.CeilToInt((float)size / iconsPerRow);
 
         //Ajustamos el ancho y el espacio entre los iconos
@@ -52,7 +52,7 @@ public class OrderIcons : MonoBehaviour
         float startX3D = -padding3D * (iconsPerRow - 1) / 2; // Posición x inicial para los prefabs 3D
         float startY3D = padding3D * (iconsPerColumn - 1) / 2; // Posición y inicial para los prefabs 3D
         float currentX3D = startX3D;
-        float currentY3D = startY3D -.75f;
+        float currentY3D = 2.77f; //startY3D -.75f;
 
         Debug.Log("y inicial" + startY3D);
         
@@ -71,7 +71,7 @@ public class OrderIcons : MonoBehaviour
             Icon newIcon3D = Instantiate(iconPrefab3D, panel3D);
 
             //Ajustamos el tamaño del icono 3D
-            newIcon3D.transform.localScale = new Vector3(1, 1, 1);
+            newIcon3D.transform.localScale = new Vector3(1.34f, 1.67f, 10f);
 
             // Ajustamos la posición del icono 3D para que esté en el mismo lugar que el icono 2D
             newIcon3D.transform.position = new Vector3(currentX3D, currentY3D, 0);
@@ -86,7 +86,7 @@ public class OrderIcons : MonoBehaviour
                 currentX = startX;
                 currentY -= iconHeight + padding;
                 currentX3D = startX3D; // Reiniciamos la posición x para los prefabs 3D
-                currentY3D -= padding3D; // Aumentamos la posición y para los prefabs 3D
+                currentY3D -= 1.88f; // Aumentamos la posición y para los prefabs 3D
             }
         }
         main.CreateIDs(size);

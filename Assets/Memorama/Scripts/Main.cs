@@ -2,16 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using TMPro;
+using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Main : MonoBehaviour
 {
+    [Header("Prefabs")]
     [SerializeField] public Icon[] icons;
     [SerializeField] public Texture2D[] imgs;
     [SerializeField] UIManager uiManager;
-
+    [SerializeField] GameBar gameBar;
     private bool started;
     private bool waitForCheck;
+
+    #region infoZone
+    [SerializeField] public Texture2D infoImage;
+    #endregion
 
     #region Timer
     [SerializeField] private int timeToPlay = 60; // Tiempo en segundos
@@ -22,6 +29,7 @@ public class Main : MonoBehaviour
     #region Score
     [SerializeField] private TextMeshProUGUI scoreTxt; // Texto para mostrar el score
     [SerializeField] TextMeshProUGUI Finalscore;
+    [SerializeField] TextMeshProUGUI avanceGame;
     private int score, sizeBegin;
     #endregion
 
@@ -143,10 +151,14 @@ public class Main : MonoBehaviour
             item2.ParticlesAndDisable();
             Score();
             sizeBegin++;
+            avanceGame.text = sizeBegin + "/" + imgs.Length;
             Debug.Log(sizeBegin + " / " + imgs.Length);
+            gameBar.StarInfo();
             if (sizeBegin == imgs.Length)
             {
-                Finalscore.text = score.ToString();
+                controlTimer("Stop");
+                Finalscore.text = timeText.text;
+                
                 uiManager.GoWin();
             }
         }
@@ -169,14 +181,14 @@ public class Main : MonoBehaviour
     }
     private void UpdateTimeText()
     {
-        timeLeft -= Time.deltaTime;
+        timeLeft += Time.deltaTime;
 
 
-        if (timeLeft <= 0)
+        if (timeLeft >= 0)
         {
             Debug.Log("Tiempo agotado.");
             Finalscore.text = score.ToString();
-            uiManager.GoWin();
+            // uiManager.GoWin();
         }
 
         int minutes = Mathf.FloorToInt(timeLeft / 60);
@@ -184,8 +196,21 @@ public class Main : MonoBehaviour
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-    public void Restart()
+    public void controlTimer(string controlTime)
     {
-
+        switch (controlTime)
+        {
+            case "Again":
+                started = true;
+                break;
+            case "Stop":
+                started = false;
+                break;
+        }
     }
+
+    // private void SetImage()
+    // {
+    //     infoImage = icons.image();
+    // }
 }
