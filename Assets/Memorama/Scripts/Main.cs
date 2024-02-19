@@ -10,8 +10,12 @@ public class Main : MonoBehaviour
     [Header("Prefabs")]
     [SerializeField] public Icon[] icons;
     [SerializeField] public Texture2D[] imgs;
+
+    #region Scripts
     [SerializeField] UIManager uiManager;
     [SerializeField] GameBar gameBar;
+    [SerializeField] SoundsManager soundsManager;
+    #endregion
     private bool started;
     private bool waitForCheck;
     
@@ -149,9 +153,10 @@ public class Main : MonoBehaviour
         Debug.Log("Check");
         if (item1.GetID() == item2.GetID())
         {
-
+            
             item1.ParticlesAndDisable();
             item2.ParticlesAndDisable();
+            soundsManager.PlaySound("Good");
             Score();
             sizeBegin++;
             avanceGame.text = sizeBegin + "/" + imgs.Length;

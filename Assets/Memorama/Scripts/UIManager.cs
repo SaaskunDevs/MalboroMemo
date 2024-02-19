@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
     
     [Header("Scripts")]
     [SerializeField]  Main main;
+    [SerializeField] SoundsManager soundsManager;
 
     public void GoMenu()
     {
@@ -31,12 +32,16 @@ public class UIManager : MonoBehaviour
         menuUI.SetActive(false);
         gameUI.SetActive(false);
         winUI.SetActive(false);
+
+        soundsManager.PlaySound("Button");
         
     }
     public void SwitchButton()
     {
         switchBtnNext.SetActive(false);
         switchBtnReady.SetActive(true);
+
+        soundsManager.PlaySound("Button");
     }
     public void GoGame()
     {
@@ -47,6 +52,7 @@ public class UIManager : MonoBehaviour
         instrucUI.SetActive(false);
         winUI.SetActive(false);
 
+        soundsManager.PlaySound("Button");
         main.StartMemorama();
     }
     public void GoWin()
@@ -57,6 +63,8 @@ public class UIManager : MonoBehaviour
         memoramaGame.SetActive(false);
         gameUI.SetActive(false);
         instrucUI.SetActive(false);
+
+        soundsManager.PlaySound("Finish");
         
     }
     public void activateInfo()
@@ -74,6 +82,12 @@ public class UIManager : MonoBehaviour
         }
     }
     public void resetGame()
+    {
+        soundsManager.PlaySound("Button");
+        Invoke("resetGameWin", .3f);
+    }
+
+    public void resetGameWin()
     {
         SceneManager.LoadScene(0);
     }
