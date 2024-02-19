@@ -1381,7 +1381,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.035, y: 0.010893517}
   m_AnchorMax: {x: 0.97129637, y: 0.036893528}
-  m_AnchoredPosition: {x: -503.96997, y: 21}
+  m_AnchoredPosition: {x: -503.96994, y: 21}
   m_SizeDelta: {x: -931.9396, y: 1751.2639}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &449043201
@@ -1457,7 +1457,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 20.231995, y: -167}
+  m_AnchoredPosition: {x: 20.231934, y: -167}
   m_SizeDelta: {x: -475.7291, y: -1429.065}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &452825738
@@ -2006,7 +2006,7 @@ MonoBehaviour:
   uiManager: {fileID: 610963447}
   gameBar: {fileID: 610963448}
   infoImage: {fileID: 0}
-  timeToPlay: 60
+  timeToPlay: 0
   timeText: {fileID: 1979445637}
   scoreTxt: {fileID: 1541234049}
   Finalscore: {fileID: 1176430555}
@@ -2887,7 +2887,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 13.435974, y: -93.90698}
+  m_AnchoredPosition: {x: 13.436035, y: -93.90698}
   m_SizeDelta: {x: 397.1279, y: 96.1866}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1038124443
@@ -6292,7 +6292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1971482559
 RectTransform:
   m_ObjectHideFlags: 0

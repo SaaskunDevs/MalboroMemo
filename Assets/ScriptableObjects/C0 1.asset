@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab8fbf3bee113aa4cbc109c9f0873fbb, type: 3}
+  m_Name: C0 1
+  m_EditorClassIdentifier: 
+  cigarretteIndex: 1
+  infoCiga: "A pesar de tener la misma mezcla de tabaco que los rojos, el perfil
+    de sabor es menos intenso.\n\nSu menor intensidad sabor y concentraci\xF3n de
+    alquitr\xE1n y nicotina los hacen atractivos para los fumadores que prefieren
+    una experiencia m\xE1s suave.\n\nEncuentra los en formatos de 20\xB4s."
+  imgCigarrette: {fileID: 2800000, guid: f1be5bbcbcead674b957285f8dd95eab, type: 3}
