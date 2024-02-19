@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: C4
   m_EditorClassIdentifier: 
   cigarretteIndex: 4
-  infoCiga: "Los cl\xE1sicos blancos ahora con c\xE1psulan el filtro que ofrece una
-    experiencia personalizable.\n\nLa c\xE1psula puede transformar el sabor de un
-    tabaco tradicional un sabor mentolado.\n\nEncu\xE9ntralos en formatos 100\xB4s
-    y 20\xB4s. "
+  infoCiga: "Los cl\xE1sicos blancos ahora con c\xE1psula en el filtro que ofrece
+    una experiencia personalizable.\n\nLa c\xE1psula puede transformar el sabor de
+    un tabaco tradicional un sabor mentolado.\n\nEncu\xE9ntralos en formatos 100's
+    y 20's. "
   imgCigarrette: {fileID: 21300000, guid: cfe49c6bd3177f542a6fae671f5b645c, type: 3}
