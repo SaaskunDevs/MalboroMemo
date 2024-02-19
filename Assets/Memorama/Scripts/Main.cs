@@ -15,9 +15,13 @@ public class Main : MonoBehaviour
     [SerializeField] GameBar gameBar;
     private bool started;
     private bool waitForCheck;
+    
 
     #region infoZone
     [SerializeField] public Texture2D infoImage;
+    [SerializeField] public InfoCigarrette[] infoCigarrettes;
+    [SerializeField] Image imgInfo;
+    [SerializeField] TextMeshProUGUI infoText;
     #endregion
 
     #region Timer
@@ -146,7 +150,7 @@ public class Main : MonoBehaviour
         Debug.Log("Check");
         if (item1.GetID() == item2.GetID())
         {
- //           Debug.Log("tabien");
+
             item1.ParticlesAndDisable();
             item2.ParticlesAndDisable();
             Score();
@@ -154,13 +158,17 @@ public class Main : MonoBehaviour
             avanceGame.text = sizeBegin + "/" + imgs.Length;
             Debug.Log(sizeBegin + " / " + imgs.Length);
             gameBar.StarInfo();
-            if (sizeBegin == imgs.Length)
-            {
-                controlTimer("Stop");
-                Finalscore.text = timeText.text;
+            Debug.Log("Iniciando info ID ELEGIDO: " + item1.GetID());
+            infoText.text = infoCigarrettes[item1.GetID() - 1].infoCiga; 
+            imgInfo.sprite = infoCigarrettes[item1.GetID() - 1].imgCigarrette;
+            uiManager.activateInfo();
+            // if (sizeBegin == imgs.Length)
+            // {
+            //     controlTimer("Stop");
+            //     Finalscore.text = timeText.text;
                 
-                uiManager.GoWin();
-            }
+            //     // uiManager.GoWin();
+            // }
         }
         else
         {
@@ -209,8 +217,10 @@ public class Main : MonoBehaviour
         }
     }
 
-    // private void SetImage()
-    // {
-    //     infoImage = icons.image();
-    // }
+    public void WinMoment()
+    {
+        controlTimer("Stop");
+        Finalscore.text = timeText.text;
+        uiManager.GoWin();
+    }
 }

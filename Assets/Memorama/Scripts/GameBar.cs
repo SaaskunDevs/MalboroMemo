@@ -5,14 +5,17 @@ using UnityEngine.UI;
 
 public class GameBar : MonoBehaviour
 {
+    int numberOfPoints;
     bool starCountDown = false;
-    [SerializeField] float timeCountDown;
+    float timeCountDown;
+    [SerializeField] float timeLeft;
     [SerializeField] Image imageTimer;
     [SerializeField] Main main;
+    [SerializeField] UIManager uiManager;
 
     void Start()
     {
-        
+        timeCountDown = timeLeft;
     }
 
     // Update is called once per frame
@@ -23,21 +26,27 @@ public class GameBar : MonoBehaviour
             Debug.Log("Iniciando info");
             main.controlTimer("Stop");
             timeCountDown -= Time.deltaTime;
-            imageTimer.fillAmount = timeCountDown / 20f;
+            imageTimer.fillAmount = timeCountDown / timeLeft;
 
             if (timeCountDown <= 0f)
             {
                 starCountDown = false;
                 main.controlTimer("Again");
                 Debug.Log("Retornando memorama");
+                uiManager.deactivateInfo();
+                if (numberOfPoints == main.imgs.Length)
+                {
+                    main.WinMoment();
+                }
             }
         }
     }
 
     public void StarInfo()
     {
+        timeCountDown = timeLeft;
         starCountDown = true;
-        timeCountDown = 20f;
+        numberOfPoints++;
     }
     public void StopInfo()
     {

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab8fbf3bee113aa4cbc109c9f0873fbb, type: 3}
-  m_Name: C0
+  m_Name: C1
   m_EditorClassIdentifier: 
-  cigarretteIndex: 0
+  cigarretteIndex: 1
   infoCiga: "Mentolados de base, Con dos c\xE1psulas de filtro para la intensidad
     y el sabor del cigarrillo, Ofreciendo una experiencia personalizable.\n\nLa c\xE1psula
     puede transformar el sabor de un tabaco tradicional a un sabor con un boost Mentolado.\n\nEncuentra
     los en formatos 20\xB4s y 100\xB4s "
-  imgCigarrette: {fileID: 2800000, guid: 182286dab539b754ba397bdd96cde487, type: 3}
+  imgCigarrette: {fileID: 21300000, guid: 182286dab539b754ba397bdd96cde487, type: 3}
