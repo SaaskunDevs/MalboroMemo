@@ -16,5 +16,5 @@ MonoBehaviour:
   infoCiga: "A pesar de tener la misma mezcla de tabaco que los rojos, el perfil
     de sabor es menos intenso.\n\nSu menor intensidad sabor y concentraci\xF3n de
     alquitr\xE1n y nicotina los hacen atractivos para los fumadores que prefieren
-    una experiencia m\xE1s suave.\n\nEncuentra los en formatos de 20's."
+    una experiencia m\xE1s suave.\n\nEncu\xE9ntralos en formatos de 20's."
   imgCigarrette: {fileID: 21300000, guid: f1be5bbcbcead674b957285f8dd95eab, type: 3}

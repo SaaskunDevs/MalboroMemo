@@ -130,6 +130,7 @@ public class Main : MonoBehaviour
                         item2 = icn;
                         icn.UserClick();
                         selected++;
+                        waitForCheck = false;
                     }
                 }
                 
@@ -139,11 +140,13 @@ public class Main : MonoBehaviour
 
     public void CheckItems()
     {
+        if (waitForCheck)
+            return;
        // canSelect = true;
         if (selected != 2)
             return;
         waitForCheck = true;
-//        Debug.Log("Check items");
+        Debug.Log("Check items");
         StartCoroutine(DelayToCheck());
     }
 
@@ -181,7 +184,7 @@ public class Main : MonoBehaviour
             item2.ReturnAnim();
         }
 
-        yield return new WaitForSeconds(0.21f);
+        yield return new WaitForSeconds(0.3f);
         selected = 0;
         waitForCheck = false;
     }
@@ -198,7 +201,7 @@ public class Main : MonoBehaviour
 
         if (timeLeft >= 0)
         {
-            Debug.Log("Tiempo agotado.");
+           // Debug.Log("Tiempo agotado.");
             Finalscore.text = score.ToString();
             // uiManager.GoWin();
         }

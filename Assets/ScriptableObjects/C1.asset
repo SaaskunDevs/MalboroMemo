@@ -15,6 +15,6 @@ MonoBehaviour:
   cigarretteIndex: 1
   infoCiga: "Mentolados de base, con dos c\xE1psulas de filtro para la intensidad
     y el sabor del cigarrillo, ofreciendo una experiencia personalizable.\n\nLa c\xE1psula
-    puede transformar el sabor de un tabaco tradicional a un sabor con un boost mentolado.\n\nEncuentra
-    los en formatos 20's y 100's "
+    puede transformar el sabor de un tabaco tradicional a un sabor con un boost mentolado.\n\nEncu\xE9ntralos
+    en formatos 20's y 100's "
   imgCigarrette: {fileID: 21300000, guid: 182286dab539b754ba397bdd96cde487, type: 3}

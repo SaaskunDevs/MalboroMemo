@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: C3
   m_EditorClassIdentifier: 
   cigarretteIndex: 3
-  infoCiga: "Los Clasicos Rojos ahora con c\xE1psula en el filtro que ofrece una
+  infoCiga: "Los cl\xE1sicos rojos ahora con c\xE1psula en el filtro que ofrece una
     experiencia personalizable.\n\nLa c\xE1psula puede transformar el sabor de un
-    tabaco tradicional a un sabor mentolado. \n\nEncuentralos en formatos de 100's
+    tabaco tradicional a un sabor mentolado. \n\nEncu\xE9ntralos en formatos de 100's
     y 20's."
   imgCigarrette: {fileID: 21300000, guid: 22504bee6993c3b45a5662e42bbc84f5, type: 3}

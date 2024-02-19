@@ -23,7 +23,7 @@ public class GameBar : MonoBehaviour
     {
         if (starCountDown)
         {
-            Debug.Log("Iniciando info");
+           // Debug.Log("Iniciando info");
             main.controlTimer("Stop");
             timeCountDown -= Time.deltaTime;
             imageTimer.fillAmount = timeCountDown / timeLeft;

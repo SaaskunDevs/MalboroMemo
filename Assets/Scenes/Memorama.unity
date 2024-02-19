@@ -2233,7 +2233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e47504f0e1d2d2e43b5f00a3c284eff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 10
+  timeLeft: 15
   imageTimer: {fileID: 1582863502}
   main: {fileID: 610963444}
   uiManager: {fileID: 610963447}
@@ -6417,7 +6417,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7ab124916f772d747aade8c13d6825e0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3de4d48bceb9aad4fad699b0e8c0be52, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
